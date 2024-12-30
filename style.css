@@ -1,0 +1,99 @@
+body {
+  background-color: #c5c5c5;
+  max-width: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Style de la liste d'item */
+#list li {
+  max-width: 40%;
+  padding: 10px;
+  background-color: white;
+  margin: 5px 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+}
+
+#list li:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+/* Style de l'input */
+#addText-field {
+  padding: 5px;
+  border-radius: 5px;
+  border-style: none;
+  font-size: medium;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Bouton "Ajouter" & "Tout Supprimer" */
+button {
+  border-radius: 5px;
+  background-color: #555;
+  color: aliceblue;
+}
+
+#addElement-button:hover,
+#addElement-button:focus {
+  background-color: #838383;
+}
+#delElement-button:hover,
+#delElement-button:focus {
+  background-color: #a74646;
+}
+
+/* Icônes pour les boutons */
+.Supp-btn,
+.Modifier-btn {
+  display: flex;
+  float: inline-end;
+  margin: 0 5px;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.Supp-btn:hover {
+  color: red;
+}
+
+.Modifier-btn:hover {
+  color: blue;
+}
+
+/* Animation fade */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  #list li {
+    max-width: 90%;
+  }
+}
